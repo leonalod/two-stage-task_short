@@ -1,0 +1,247 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="MK lab" />
+    <title>Experiment</title>
+    <link href="jspsych/dist/jspsych.css" rel="stylesheet" type="text/css">
+    <style> 
+    .planet_select_left {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .planet_select_right {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .planet_background {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .background {
+        width: 100%;
+        height: 100vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .earth_background {
+        width: 100%;
+        height: 100vh;
+        background-image: url(img/earth_planet.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .green_background {
+        width: 100%;
+        height: 100vh;
+        background-image: url(img/green_planet.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .purple_background {
+        width: 100%;
+        height: 100vh;
+        background-image: url(img/purple_planet.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .outcome {
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .point {
+        position: absolute;
+        font-size: 6vh;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .sentence_above {
+        position: absolute;
+        font-size: 3vh;
+        line-height: 5vh;
+        text-align: center;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .sentence_below {
+        position: absolute;
+        font-size: 4vh;
+        line-height: 7vh;
+        top: 75%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .arrow_up_position {
+        position: absolute;
+        top: 18%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .rocket_left_position {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .rocket_right_position {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .rocket_left_position2 {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .rocket_right_position2 {
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translateX(-50%) translateY(-50%)
+    }
+    .planet_text_position {
+        position: absolute;
+        top: 80%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 5vh;
+        line-height: 7vh;
+    }
+    .point_position {
+        position: absolute;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 6vh;
+    }
+    .route_text_position {
+        position: absolute;
+        top: 85%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 4vh;
+    }
+    .preference_left_position {
+        position: absolute;
+        top: 30%;
+        left: 25%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .preference_right_position {
+        position: absolute;
+        top: 30%;
+        left: 75%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .slider_position #jspsych-html-slider-response-wrapper {margin-top: +300px !important;}
+    .route_preference_earth_position {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .route_preference_left_position {
+        position: absolute;
+        top: 20%;
+        left: 20%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .route_preference_right_position {
+        position: absolute;
+        top: 20%;
+        left: 80%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .center_position {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        font-size: 5vh;
+        text-align: left;
+        line-height: 7vh;
+    }
+    .reward_position_left {
+        position: absolute;
+        top: 20%;
+        left: 38%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .reward_position_right {
+        position: absolute;
+        top: 20%;
+        left: 62%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .reward_position_right {
+        position: absolute;
+        top: 20%;
+        left: 62%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .reward_position_right2 {
+        position: absolute;
+        top: 20%;
+        left: 74%;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .inst_text {
+        font-size: 3vh;
+        line-height: 4.5vh;
+        /* text-align: left; */
+    }
+    .img_align {
+        float: left;
+    }
+    </style>
+</head>
+
+<body>
+    <script src="jspsych/dist/jspsych.js"></script>
+    <!-- 必要なプラグインを記述 -->
+    <body bgcolor="#000000", text="#ffffff")></body> <!--bgcolor=bagground color=black, text=white-->>
+    <script src="jspsych/dist/plugin-html-keyboard-response.js"></script>
+    <script src="jspsych/dist/plugin-html-slider-response.js"></script>
+    <script src="jspsych/dist/plugin-html-button-response.js"></script>
+    <script src="jspsych/dist/plugin-survey-text.js"></script>
+    <script src="jspsych/dist/plugin-preload.js"></script>
+    <script src="jspsych/dist/plugin-instructions.js"></script>
+    <script src="jspsych/dist/plugin-fullscreen.js"></script>
+    <script src="jstat/dist/jstat.js"></script>
+    <script src="https://unpkg.com/@jspsych-contrib/plugin-pipe"></script>
+    
+    <!-- ここまで -->
+
+    <!-- 実験ファイルを記述-->
+    <script src="two_stage_task.js"></script>
+    <!--ここまで-->
+</body>
+</html>
